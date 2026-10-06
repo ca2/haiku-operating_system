@@ -1,0 +1,8 @@
+[submodule "operating_system-haiku"]
+	path = operating_system-haiku
+	url = ../operating_system-haiku
+	branch = main
+[submodule "operating_system-posix"]
+	path = operating_system-posix
+	url = ../operating_system-posix
+	branch = main
