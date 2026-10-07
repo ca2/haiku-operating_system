@@ -7,7 +7,9 @@ if(${CMAKE_SYSTEM_NAME} STREQUAL "Haiku")
 
 add_subdirectory(operating_system-posix/acme_posix)
 add_subdirectory(operating_system-haiku/acme_haiku)
-#add_subdirectory(operating_system-haiku/acme_windowing_haiku)
+add_subdirectory(operating_system-haiku/draw2d_haiku)
+add_subdirectory(operating_system-haiku/acme_windowing_haiku)
+add_subdirectory(operating_system-haiku/windowing_haiku)
 #add_subdirectory(operating_system-windows/nano_graphics_gdi)
 #add_subdirectory(operating_system-windows/gdiplus_library)
 add_subdirectory(operating_system-posix/nano_graphics_cairo)
@@ -17,9 +19,10 @@ add_subdirectory(operating_system-posix/nano_compress_command_line)
 add_subdirectory(operating_system-posix/nano_http_command_line)
 add_subdirectory(operating_system-posix/apex_posix)
 add_subdirectory(operating_system-haiku/apex_haiku)
-#add_subdirectory(operating_system-posix/aura_posix)
-#add_subdirectory(operating_system-haiku/aura_haiku)
-#add_subdirectory(operating_system-haiku/node_haiku)
+add_subdirectory(operating_system-posix/aura_posix)
+add_subdirectory(operating_system-haiku/aura_haiku)
+add_subdirectory(operating_system-haiku/node_haiku)
+add_subdirectory(operating_system-haiku/operating_ambient_haiku)
 
 #option(INCLUDE_ACCESSIBILITY_ATSPI "Build AT-SPI accessibility automation" ON)
 
@@ -51,7 +54,7 @@ endif()
 
 #add_subdirectory(operating_system-windows_common/imaging_wic)
 
-include(operating_system-posix/_desktop_ambient_5.cmake)
+# Native Haiku modules are selected explicitly above.
 #if(DESKTOP_AMBIENT)
    #add_subdirectory(operating_system-posix/input_xinput)
 #endif()
