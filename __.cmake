@@ -1,7 +1,11 @@
 
 
 
-if(${CMAKE_SYSTEM_NAME} STREQUAL "SunOS")
+if(${CMAKE_SYSTEM_NAME} STREQUAL "Haiku")
+
+include(operating_system/operating_system-haiku/__.cmake)
+
+elseif(${CMAKE_SYSTEM_NAME} STREQUAL "SunOS")
 
 include(operating_system/operating_system-sunos/__.cmake)
 
