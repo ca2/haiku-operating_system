@@ -7,6 +7,7 @@ if(${CMAKE_SYSTEM_NAME} STREQUAL "Haiku")
 
 add_subdirectory(operating_system-posix/acme_posix)
 add_subdirectory(operating_system-haiku/acme_haiku)
+add_subdirectory(operating_system-haiku/nano_graphics_haiku)
 add_subdirectory(operating_system-haiku/draw2d_haiku)
 add_subdirectory(operating_system-haiku/write_text_haiku)
 add_subdirectory(operating_system-haiku/acme_windowing_haiku)
@@ -34,11 +35,7 @@ add_subdirectory(operating_system-haiku/operating_ambient_haiku)
 #endif()
 
 if(INCLUDE_AUDIO)
-   add_subdirectory(operating_system-posix/audio_sunaudio)
-   add_subdirectory(operating_system-posix/audio_oss)
-   # Audio backends are loaded dynamically, so ensure application audio builds
-   # also produce both modules. Link dependencies point from the backends to
-   # audio; ordering dependencies must go on applications to avoid a cycle.
+   add_subdirectory(operating_system-haiku/audio_haiku)
 endif()
 
 #add_subdirectory(operating_system-windows/innate_ui_win32)
@@ -151,4 +148,3 @@ add_subdirectory(operating_system-windows/input_win32)
 add_subdirectory(operating_system-windows_common/imaging_wic)
 
 endif()
-
